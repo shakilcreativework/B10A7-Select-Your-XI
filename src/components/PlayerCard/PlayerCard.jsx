@@ -1,9 +1,10 @@
 
 import userImg from "./../../assets/user1.png";
 import userFlag from "./../../assets/flag1.png";
-import React from 'react';
+import React, { useState } from 'react';
 
 const PlayerCard = ({player}) => {
+    const [isSelected, setIsSelected] = useState(false);
 
     return (
         <div className="card bg-base-100 shadow-sm p-4">
@@ -40,8 +41,13 @@ const PlayerCard = ({player}) => {
                 <p className="font-semibold">
                   Price: <span>{player.price}</span>
                 </p>
-                <button className="bg-none py-2 cursor-pointer px-3 border text-sm border-gray-300 text-[#131313] rounded-md">
-                  Choose Player
+                <button disabled={isSelected} onClick={() => setIsSelected(true)} className={`btn bg-none py-2 cursor-pointer px-3 border text-sm border-gray-300 ${isSelected ? 'text-[#131313]' : 'text-gray-500'}  rounded-md font-medium`}>
+                  {
+                    isSelected ?
+                    'Selected'
+                    :
+                    'Choose Player'
+                  }
                 </button>
               </div>
             </div>
