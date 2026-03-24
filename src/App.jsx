@@ -31,10 +31,10 @@ function App() {
             Available Players
           </h2>
           <div className="border border-gray-200 rounded-2xl">
-            <button onClick={() => setToggle(true)} className={`py-2 px-5 rounded-l-2xl transition-all text-[#131313] font-semibold ${toggle ? 'bg-[#E7FE29]' : 'text-gray-400 bg-none'}`}>
+            <button onClick={() => setToggle(true)} className={`py-2 px-5 rounded-l-2xl transition-all text-[#131313] font-semibold ${toggle ? 'bg-[#E7FE29]' : 'text-gray-400 bg-white'}`}>
               Available
             </button>
-            <button onClick={() => setToggle(false)} className={`py-2 px-5 rounded-r-2xl transition-all ${toggle ? 'text-gray-400 bg-none' : 'bg-[#E7FE29]'} font-semibold `}>
+            <button onClick={() => setToggle(false)} className={`py-2 px-5 rounded-r-2xl transition-all ${toggle ? 'text-gray-400 bg-white' : 'bg-[#E7FE29]'} font-semibold `}>
               Selected (0)
             </button>
           </div>
