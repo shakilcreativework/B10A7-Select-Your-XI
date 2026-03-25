@@ -10,16 +10,18 @@ const fetchPlayers = async () => {
   return res.json();
 };
 
+const playersPromise = fetchPlayers();
+
 function App() {
   const [toggle, setToggle] = useState(true);
-  const playersPromise = fetchPlayers();
+  const [availableBalance, setAvailableBalance] = useState(6000000000);
 
   return (
     <>
       {/* header */}
       <header className="shadow-sm">
         <div className="max-w-300 mx-auto px-4 lg:px-0">
-          <Navbar />
+          <Navbar availableBalance={availableBalance} />
         </div>
       </header>
 
@@ -44,7 +46,7 @@ function App() {
           <Suspense
             fallback={<span className="loading loading-dots loading-xl"></span>}
           >
-            <AvailablePlayers playersPromise={playersPromise} />
+            <AvailablePlayers playersPromise={playersPromise} setAvailableBalance={setAvailableBalance} availableBalance={availableBalance} />
           </Suspense>
         ) : (
           <SelectedPlayers />
