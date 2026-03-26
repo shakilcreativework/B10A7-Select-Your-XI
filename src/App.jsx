@@ -22,6 +22,13 @@ function App() {
   // console.log(choosePlayers, choosePlayers.length)
   // console.log(allPlayers);
 
+  // handle delete player
+  const removePlayer = (p) => {
+    console.log(p);
+    const filterPlayerData = choosePlayers.filter(ply => ply.id !== p.id);
+    setChoosePlayers(filterPlayerData);
+  };
+
   return (
     <>
       {/* header */}
@@ -60,7 +67,7 @@ function App() {
             <AvailablePlayers playersData={playersData} setAvailableBalance={setAvailableBalance} availableBalance={availableBalance} choosePlayers={choosePlayers} setChoosePlayers={setChoosePlayers} />
           </Suspense>
         ) : (
-          <SelectedPlayers choosePlayers={choosePlayers} />
+          <SelectedPlayers choosePlayers={choosePlayers} removePlayer={removePlayer} />
         )}
       </main>
     </>

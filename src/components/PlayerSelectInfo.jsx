@@ -1,12 +1,12 @@
 import React from "react";
 import { Trash2 } from 'lucide-react';
 
-const PlayerSelectInfo = ({ player }) => {
+const PlayerSelectInfo = ({ player, removePlayer }) => {
   // console.log(player);
 
   // handle delete player
-  const deletePlayer = () => {
-    console.log('btn clicked!')
+  const deletePlayer = (player) => {
+    removePlayer(player);
   };
 
   return (
@@ -22,7 +22,7 @@ const PlayerSelectInfo = ({ player }) => {
             <p className="font-semibold text-gray-400">{player["bating-style"]}</p>
         </div>
       </div>
-      <button onClick={() => deletePlayer()}>
+      <button onClick={() => deletePlayer(player)}>
         <Trash2 className="text-red-600" />
       </button>
     </div>
