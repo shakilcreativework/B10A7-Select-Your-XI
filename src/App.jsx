@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { Suspense, use, useState } from "react";
 import "./App.css";
 import AvailablePlayers from "./components/AvailablePlayers/AvailablePlayers";
 import Navbar from "./components/Navbar/Navbar";
@@ -13,6 +13,8 @@ const fetchPlayers = async () => {
 const playersPromise = fetchPlayers();
 
 function App() {
+  const playersData = use(playersPromise);
+  // console.log(playersData);
   const [toggle, setToggle] = useState(true);
   const [availableBalance, setAvailableBalance] = useState(6000000000);
   // const [allPlayers, setAllPlayers] = useState([]);
@@ -34,14 +36,19 @@ function App() {
         {/* available and selected */}
         <div className="flex flex-col md:flex-row gap-5 justify-between items-center my-7">
           <h2 className="text-xl md:text-2xl lg:text-[28px] font-bold">
-            Available Players
+            {
+              toggle ? 
+              'Available Players'
+              :
+              `Selected Player (${choosePlayers.length}/${playersData.length})`
+            }
           </h2>
           <div className="border border-gray-200 rounded-2xl">
             <button onClick={() => setToggle(true)} className={`py-2 px-5 rounded-l-2xl transition-all text-[#131313] font-semibold ${toggle ? 'bg-[#E7FE29]' : 'text-gray-400 bg-white'}`}>
               Available
             </button>
             <button onClick={() => setToggle(false)} className={`py-2 px-5 rounded-r-2xl transition-all ${toggle ? 'text-gray-400 bg-white' : 'bg-[#E7FE29]'} font-semibold `}>
-              Selected ({choosePlayers.length})
+              Selected ({choosePlayers.length}/{playersData.length})
             </button>
           </div>
         </div>
@@ -50,7 +57,7 @@ function App() {
           <Suspense
             fallback={<span className="loading loading-dots loading-xl"></span>}
           >
-            <AvailablePlayers playersPromise={playersPromise} setAvailableBalance={setAvailableBalance} availableBalance={availableBalance} choosePlayers={choosePlayers} setChoosePlayers={setChoosePlayers} />
+            <AvailablePlayers playersData={playersData} setAvailableBalance={setAvailableBalance} availableBalance={availableBalance} choosePlayers={choosePlayers} setChoosePlayers={setChoosePlayers} />
           </Suspense>
         ) : (
           <SelectedPlayers choosePlayers={choosePlayers} />

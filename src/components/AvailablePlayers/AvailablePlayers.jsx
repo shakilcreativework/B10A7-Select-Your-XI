@@ -1,9 +1,9 @@
-import React, { use } from "react";
+// import React, { use } from "react";
 import PlayerCard from "../PlayerCard/PlayerCard";
 
-const AvailablePlayers = ({ playersPromise, setAvailableBalance, availableBalance, choosePlayers, setChoosePlayers }) => {
-  // console.log(playersPromise);
-  const playersData = use(playersPromise);
+const AvailablePlayers = ({ playersData, setAvailableBalance, availableBalance, choosePlayers, setChoosePlayers }) => {
+  console.log(playersData);
+  // const playersDatas = use(playersPromise);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
