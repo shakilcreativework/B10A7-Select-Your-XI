@@ -2,12 +2,23 @@ import userImg from "./../../assets/user1.png";
 import userFlag from "./../../assets/flag1.png";
 import React, { useState } from "react";
 
-const PlayerCard = ({ player, availableBalance, setAvailableBalance }) => {
+const PlayerCard = ({ player, availableBalance, setAvailableBalance, choosePlayers, setChoosePlayers }) => {
   // convert play price and replace $ and , from string price
   const price = Number(player?.price.replace(/[$,]/g, ""));
   // console.log(typeof availableBalance, availableBalance);
   // console.log(typeof player?.price, player?.price);
   const [isSelected, setIsSelected] = useState(false);
+
+  // handle players information with balance
+  const handlePlayers = (players) => {
+    if(availableBalance >= price){
+      setIsSelected(true);
+      setAvailableBalance(availableBalance - price);
+      setChoosePlayers([...choosePlayers, players]);
+    }else{
+      alert('Balance not available');
+    }
+  };
 
   return (
     <div className="card bg-base-100 shadow-sm p-4">
@@ -45,10 +56,7 @@ const PlayerCard = ({ player, availableBalance, setAvailableBalance }) => {
             </p>
             <button
               disabled={isSelected}
-              onClick={() => {
-                setIsSelected(true);
-                setAvailableBalance(availableBalance >= price ? availableBalance - price : availableBalance);
-              }}
+              onClick={() => {handlePlayers(player)}}
               className={`btn bg-none py-2 cursor-pointer px-3 border text-sm border-gray-300 ${isSelected ? "text-[#131313]" : "text-gray-500"}  rounded-md font-medium`}
             >
               {isSelected ? "Selected" : "Choose Player"}

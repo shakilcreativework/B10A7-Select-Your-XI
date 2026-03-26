@@ -15,6 +15,10 @@ const playersPromise = fetchPlayers();
 function App() {
   const [toggle, setToggle] = useState(true);
   const [availableBalance, setAvailableBalance] = useState(6000000000);
+  // const [allPlayers, setAllPlayers] = useState([]);
+  const [choosePlayers, setChoosePlayers] = useState([]);
+  // console.log(choosePlayers, choosePlayers.length)
+  // console.log(allPlayers);
 
   return (
     <>
@@ -37,7 +41,7 @@ function App() {
               Available
             </button>
             <button onClick={() => setToggle(false)} className={`py-2 px-5 rounded-r-2xl transition-all ${toggle ? 'text-gray-400 bg-white' : 'bg-[#E7FE29]'} font-semibold `}>
-              Selected (0)
+              Selected ({choosePlayers.length})
             </button>
           </div>
         </div>
@@ -46,10 +50,10 @@ function App() {
           <Suspense
             fallback={<span className="loading loading-dots loading-xl"></span>}
           >
-            <AvailablePlayers playersPromise={playersPromise} setAvailableBalance={setAvailableBalance} availableBalance={availableBalance} />
+            <AvailablePlayers playersPromise={playersPromise} setAvailableBalance={setAvailableBalance} availableBalance={availableBalance} choosePlayers={choosePlayers} setChoosePlayers={setChoosePlayers} />
           </Suspense>
         ) : (
-          <SelectedPlayers />
+          <SelectedPlayers choosePlayers={choosePlayers} />
         )}
       </main>
     </>
