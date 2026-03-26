@@ -27,6 +27,7 @@ function App() {
     console.log(p);
     const filterPlayerData = choosePlayers.filter(ply => ply.id !== p.id);
     setChoosePlayers(filterPlayerData);
+    setAvailableBalance(availableBalance + Number(p?.price.replace(/[$,]/g, "")));
   };
 
   return (
