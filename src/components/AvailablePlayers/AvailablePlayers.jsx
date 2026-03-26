@@ -2,7 +2,7 @@
 import PlayerCard from "../PlayerCard/PlayerCard";
 
 const AvailablePlayers = ({ playersData, setAvailableBalance, availableBalance, choosePlayers, setChoosePlayers }) => {
-  console.log(playersData);
+  // console.log(playersData);
   // const playersDatas = use(playersPromise);
 
   return (
