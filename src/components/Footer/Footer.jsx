@@ -46,7 +46,7 @@ const Footer = () => {
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-white mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-white mb-10 gap-4">
             <div className="space-y-2">
               <p className="text-base md:text-[18px] text-white font-semibold">
                 About Us
@@ -61,16 +61,16 @@ const Footer = () => {
                 Quick Links
               </p>
               <div className="space-y-1">
-                <li className="text-sm text-white/60">
+                <li className="text-sm text-white/60 list-none">
                   <a href="">Home</a>
                 </li>
-                <li className="text-sm text-white/60">
+                <li className="text-sm text-white/60 list-none">
                   <a href="">Services</a>
                 </li>
-                <li className="text-sm text-white/60">
+                <li className="text-sm text-white/60 list-none">
                   <a href="">About</a>
                 </li>
-                <li className="text-sm text-white/60">
+                <li className="text-sm text-white/60 list-none">
                   <a href="">Contact</a>
                 </li>
               </div>
