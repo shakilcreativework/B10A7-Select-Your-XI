@@ -74,7 +74,7 @@ function App() {
             <AvailablePlayers playersData={playersData} setAvailableBalance={setAvailableBalance} availableBalance={availableBalance} choosePlayers={choosePlayers} setChoosePlayers={setChoosePlayers} />
           </Suspense>
         ) : (
-          <SelectedPlayers choosePlayers={choosePlayers} removePlayer={removePlayer} />
+          <SelectedPlayers choosePlayers={choosePlayers} setToggle={setToggle} removePlayer={removePlayer} />
         )}
       </main>
 
