@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "player-image": "./../src/assets/Shakib.jpg",
+    "player-image": "https://i.ibb.co.com/4ZYBRX77/Shakib.jpg",
     "player-name": "Shakib Al Hasan",
     "player-country": "Bangladesh",
     "playing-role": "All-rounder",
@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "player-image": "./../src/assets/Tamim.jpg",
+    "player-image": "https://i.ibb.co.com/5xj9PC02/Tamim.jpg",
     "player-name": "Tamim Iqbal",
     "player-country": "Bangladesh",
     "playing-role": "Batsman",
@@ -23,7 +23,7 @@
   },
   {
     "id": 3,
-    "player-image": "./../src/assets/Mushfiqur.jpg",
+    "player-image": "https://i.ibb.co.com/5XBL5Tmf/Mushfiqur.jpg",
     "player-name": "Mushfiqur Rahim",
     "player-country": "Bangladesh",
     "playing-role": "Wicketkeeper-Batsman",
@@ -34,7 +34,7 @@
   },
   {
     "id": 4,
-    "player-image": "./../src/assets/Mahmudullah.jpg",
+    "player-image": "https://i.ibb.co.com/HDtzc7rh/Mahmudullah.jpg",
     "player-name": "Mahmudullah",
     "player-country": "Bangladesh",
     "playing-role": "All-rounder",
@@ -45,7 +45,7 @@
   },
   {
     "id": 5,
-    "player-image": "./../src/assets/Andre-Russell.jpg",
+    "player-image": "https://i.ibb.co.com/v41HXqW4/Andre-Russell.jpg",
     "player-name": "Andre Russell",
     "player-country": "West Indies",
     "playing-role": "All-rounder",
@@ -56,7 +56,7 @@
   },
   {
     "id": 6,
-    "player-image": "./../src/assets/Rashid.jpg",
+    "player-image": "https://i.ibb.co.com/35KFwdGm/Rashid.jpg",
     "player-name": "Rashid Khan",
     "player-country": "Afghanistan",
     "playing-role": "Bowler",
@@ -67,7 +67,7 @@
   },
   {
     "id": 7,
-    "player-image": "./../src/assets/Faf-du-Plessis.jpg",
+    "player-image": "https://i.ibb.co.com/8Lrk5ps5/Faf-du-Plessis.jpg",
     "player-name": "Faf du Plessis",
     "player-country": "South Africa",
     "playing-role": "Batsman",
@@ -78,7 +78,7 @@
   },
   {
     "id": 8,
-    "player-image": "./../src/assets/Quinton-de-Kock.jpg",
+    "player-image": "https://i.ibb.co.com/JSkH9Sz/Quinton-de-Kock.jpg",
     "player-name": "Quinton de Kock",
     "player-country": "South Africa",
     "playing-role": "Wicketkeeper-Batsman",
@@ -89,7 +89,7 @@
   },
   {
     "id": 9,
-    "player-image": "./../src/assets/Mustafizur-Rahman-1.jpg",
+    "player-image": "https://i.ibb.co.com/rG6ftnPL/Mustafizur-Rahman-1.jpg",
     "player-name": "Mustafizur Rahman",
     "player-country": "Bangladesh",
     "playing-role": "Bowler",
@@ -100,7 +100,7 @@
   },
   {
     "id": 10,
-    "player-image": "./../src/assets/sunil-narine.jpg",
+    "player-image": "https://i.ibb.co.com/p7BRVhJ/sunil-narine.jpg",
     "player-name": "Sunil Narine",
     "player-country": "West Indies",
     "playing-role": "All-rounder",
@@ -111,7 +111,7 @@
   },
   {
     "id": 11,
-    "player-image": "./../src/assets/alex-hales-t20-international-cricket_5925836.jpg",
+    "player-image": "https://i.ibb.co.com/s9zPTgmG/alex-hales-t20-international-cricket-5925836.jpg",
     "player-name": "Alex Hales",
     "player-country": "England",
     "playing-role": "Batsman",
@@ -122,7 +122,7 @@
   },
   {
     "id": 12,
-    "player-image": "./../src/assets/wanindu-hasaranga.jpg",
+    "player-image": "https://i.ibb.co.com/dsbpTBZR/wanindu-hasaranga.jpg",
     "player-name": "Wanindu Hasaranga",
     "player-country": "Sri Lanka",
     "playing-role": "All-rounder",
