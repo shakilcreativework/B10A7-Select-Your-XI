@@ -1,5 +1,6 @@
 import React from "react";
 import { Trash2 } from 'lucide-react';
+import { toast } from "react-toastify";
 
 const PlayerSelectInfo = ({ player, removePlayer }) => {
   // console.log(player);
@@ -7,6 +8,7 @@ const PlayerSelectInfo = ({ player, removePlayer }) => {
   // handle delete player
   const deletePlayer = (player) => {
     removePlayer(player);
+    toast('Player remove successfully');
   };
 
   return (

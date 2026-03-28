@@ -1,6 +1,7 @@
 import userImg from "./../../assets/user1.png";
 import userFlag from "./../../assets/flag1.png";
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const PlayerCard = ({ player, availableBalance, setAvailableBalance, choosePlayers, setChoosePlayers }) => {
   // convert play price and replace $ and , from string price
@@ -12,11 +13,16 @@ const PlayerCard = ({ player, availableBalance, setAvailableBalance, choosePlaye
   // handle players information with balance
   const handlePlayers = (players) => {
     if(availableBalance >= price){
+      if(choosePlayers.length === 6){
+        toast('6 Players already selected');
+        return;
+      }
       setIsSelected(true);
       setAvailableBalance(availableBalance - price);
       setChoosePlayers([...choosePlayers, players]);
+      toast("Player selected successfully");
     }else{
-      alert('Balance not available');
+      toast('Balance not available');
     }
   };
 
