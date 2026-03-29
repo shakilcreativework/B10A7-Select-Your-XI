@@ -17,13 +17,9 @@ const playersPromise = fetchPlayers();
 
 function App() {
   const playersData = use(playersPromise);
-  // console.log(playersData);
   const [toggle, setToggle] = useState(true);
   const [availableBalance, setAvailableBalance] = useState(6000000000);
-  // const [allPlayers, setAllPlayers] = useState([]);
   const [choosePlayers, setChoosePlayers] = useState([]);
-  // console.log(choosePlayers, choosePlayers.length)
-  // console.log(allPlayers);
 
   // handle delete player
   const removePlayer = (p) => {

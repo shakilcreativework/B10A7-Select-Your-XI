@@ -4,10 +4,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 
 const PlayerCard = ({ player, availableBalance, setAvailableBalance, choosePlayers, setChoosePlayers }) => {
-  // convert play price and replace $ and , from string price
   const price = Number(player?.price.replace(/[$,]/g, ""));
-  // console.log(typeof availableBalance, availableBalance);
-  // console.log(typeof player?.price, player?.price);
   const [isSelected, setIsSelected] = useState(false);
 
   // handle players information with balance
